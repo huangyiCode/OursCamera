@@ -7,6 +7,7 @@
     tools:context="com.huangyicode.ourscamera.MainActivity">
 
     <com.huangyicode.ourscamera.view.OurCameraSurfaceView
+        android:id="@+id/ov_camera"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
@@ -21,5 +22,14 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_choose_camera"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@drawable/selector_camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

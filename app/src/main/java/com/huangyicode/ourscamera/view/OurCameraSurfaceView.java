@@ -65,6 +65,7 @@ public class OurCameraSurfaceView extends SurfaceView implements SurfaceHolder.C
         } catch (IOException e) {
             e.printStackTrace();
         }
+        mCamera.startPreview();
     }
 
     @Override
@@ -77,6 +78,24 @@ public class OurCameraSurfaceView extends SurfaceView implements SurfaceHolder.C
 
         mCamera.stopPreview();
 
+    }
+
+
+
+    public Camera getCamera(){
+        return mCamera;
+    }
+
+    public void setCamera(Camera camera){
+
+       this.mCamera=camera;
+        try {
+            mCamera.setPreviewDisplay(mHolder);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        setCameraDisplayOrientation((Activity) mContext,0,mCamera);
+       this.mCamera.startPreview();
     }
 
     /**

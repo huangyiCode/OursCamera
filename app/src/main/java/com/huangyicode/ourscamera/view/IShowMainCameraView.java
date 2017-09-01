@@ -4,28 +4,24 @@ package com.huangyicode.ourscamera.view;
  * Created by hasee on 2017/8/31.
  *
  *  main activity camera view action
+ *   存放所有关于界面变化的动作
  */
 public interface IShowMainCameraView {
 
     /**
-     * shutting photo
+     * 展示信息
      */
-    void shuttingPhoto();
+    void showInfo(String showInfo);
 
     /**
-     * setFlashLight
+     * 展示加载框
      */
-    void setFlashLight();
+    void showLoading();
 
     /**
-     * set focus
+     * 改变摄像头位置图标
      */
-    void setFlashLength();
+    void changeCamera(int whichCamera);
 
-
-    /**
-     * switch camera
-     */
-    void switchCamera();
 
 }
